@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Mis pedidos</title>
+  <link rel="stylesheet" href="/src/styles/store.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="../../store/home/home.html">🍕 Food Store</a>
+
+    <nav class="nav">
+      <a href="../../store/home/home.html">Inicio</a>
+      <a href="../../store/cart/cart.html">Carrito</a>
+      <a href="./orders.html">Mis pedidos</a>
+      <button id="logoutButton">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main class="orders-page">
+    <section class="orders-container">
+      <div class="orders-header">
+        <div>
+          <h1>Mis pedidos</h1>
+          <p>Consultá el estado de tus compras y el detalle de cada pedido.</p>
+        </div>
+
+        <a class="secondary-link-button" href="../../store/home/home.html">
+          Volver a la tienda
+        </a>
+      </div>
+
+      <div id="ordersContent" class="orders-list"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./orders.ts"></script>
+</body>
+</html>

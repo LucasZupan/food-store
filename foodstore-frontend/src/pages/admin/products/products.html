@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos</title>
+  <link rel="stylesheet" href="/src/styles/admin.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-logo">🍕 Food Store</div>
+
+      <div class="admin-section-title">Administración</div>
+      <div class="admin-section-subtitle">Panel de control</div>
+
+      <nav class="admin-menu">
+        <a href="../home/home.html">📊 Dashboard</a>
+        <a href="../categories/categories.html">📁 Categorías</a>
+        <a class="active" href="./products.html">🍔 Productos</a>
+        <a href="../orders/orders.html">📦 Pedidos</a>
+        <a href="../../store/home/home.html">🏪 Ver tienda</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <a href="../../store/home/home.html">Tienda</a>
+        <a href="../home/home.html">Panel Admin</a>
+        <span>Admin</span>
+        <button id="logoutButton" class="admin-logout">Cerrar sesión</button>
+      </header>
+
+      <section class="admin-content">
+        <div class="admin-page-header">
+          <h1>Gestión de Productos</h1>
+
+          <div style="display: flex; gap: 12px;">
+            <select id="availabilityFilter">
+              <option value="TODOS">Todos</option>
+              <option value="DISPONIBLES">Disponibles</option>
+              <option value="NO_DISPONIBLES">No disponibles</option>
+            </select>
+
+            <button id="openModalButton" class="admin-primary-button">
+              + Nuevo Producto
+            </button>
+          </div>
+        </div>
+
+        <div class="admin-table-card">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="productsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="productModal" class="admin-modal-overlay">
+    <div class="admin-modal admin-large-modal">
+      <div class="admin-modal-header">
+        <h2 id="modalTitle">Nuevo Producto</h2>
+        <button id="closeModalButton" class="admin-close-button">×</button>
+      </div>
+
+      <form id="productForm" class="admin-form">
+        <div class="admin-form-grid">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" required>
+          </div>
+
+          <div>
+            <label for="precio">Precio</label>
+            <input id="precio" type="number" min="1" step="0.01" required>
+          </div>
+
+          <div class="admin-form-full">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" required></textarea>
+          </div>
+
+          <div>
+            <label for="stock">Stock</label>
+            <input id="stock" type="number" min="0" required>
+          </div>
+
+          <div>
+            <label for="categoria">Categoría</label>
+            <select id="categoria" required>
+              <option value="">Seleccionar categoría</option>
+            </select>
+          </div>
+
+          <div class="admin-form-full">
+            <label for="imagen">URL de imagen</label>
+            <input id="imagen" type="text">
+          </div>
+
+          <label class="admin-checkbox-row admin-form-full">
+            <input id="disponible" type="checkbox" checked>
+            Producto disponible
+          </label>
+        </div>
+
+        <button id="submitButton" type="submit" class="admin-submit-button">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./products.ts"></script>
+</body>
+</html>

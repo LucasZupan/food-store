@@ -3,6 +3,7 @@
 # =========================
 .idea/
 *.iml
+out/
 
 # =========================
 # VS Code
@@ -10,30 +11,31 @@
 .vscode/
 
 # =========================
-# Spring Boot / Gradle
+# Backend (Gradle)
 # =========================
-backend/.gradle/
-backend/build/
-backend/target/
+foodstore-backend/.gradle/
+foodstore-backend/build/
+foodstore-backend/target/
 
+# =========================
+# Frontend (Vite)
+# =========================
+foodstore-frontend/node_modules/
+foodstore-frontend/dist/
+
+# =========================
+# Local environment files
+# =========================
+.env.local
+.env.*.local
+
+# =========================
 # Logs
+# =========================
 *.log
-
-# =========================
-# Frontend
-# =========================
-frontend/node_modules/
-frontend/dist/
-
-# =========================
-# Environment variables
-# =========================
-.env
-.env.*
 
 # =========================
 # OS
 # =========================
 .DS_Store
 Thumbs.db
-

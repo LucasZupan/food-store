@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Admin</title>
+  <link rel="stylesheet" href="/src/styles/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-logo">🍕 Food Store</div>
+
+      <div class="admin-section-title">Administración</div>
+      <div class="admin-section-subtitle">Panel de control</div>
+
+      <nav class="admin-menu">
+        <a class="active" href="./home.html">📊 Dashboard</a>
+        <a href="../categories/categories.html">📁 Categorías</a>
+        <a href="../products/products.html">🍔 Productos</a>
+        <a href="../orders/orders.html">📦 Pedidos</a>
+        <a href="../../store/home/home.html">🏪 Ver tienda</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <a href="../../store/home/home.html">Tienda</a>
+        <a href="./home.html">Panel Admin</a>
+        <span id="adminEmail">Admin</span>
+        <button id="logoutButton" class="admin-logout">Cerrar sesión</button>
+      </header>
+
+      <section class="admin-content">
+        <h1>Panel de Administración</h1>
+
+        <div id="adminStats" class="admin-dashboard-grid"></div>
+
+        <div class="admin-panel">
+          <h2>📊 Resumen rápido</h2>
+          <p id="adminSummary">Cargando estadísticas...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./home.ts"></script>
+</body>
+</html>

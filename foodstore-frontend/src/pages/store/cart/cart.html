@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Carrito</title>
+  <link rel="stylesheet" href="/src/styles/store.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="../home/home.html">🍕 Food Store</a>
+
+    <nav class="nav">
+      <a href="../home/home.html">Inicio</a>
+      <a href="./cart.html">Carrito</a>
+      <a href="../../client/orders/orders.html">Mis pedidos</a>
+      <button id="logoutButton">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main class="cart-layout">
+    <section class="cart-list-card">
+      <div class="cart-header">
+        <div>
+          <h1>Mi carrito</h1>
+          <p>Revisá tus productos antes de confirmar el pedido.</p>
+        </div>
+
+        <button id="clearCartButton" class="secondary-button">
+          Vaciar carrito
+        </button>
+      </div>
+
+      <div id="cartContent"></div>
+    </section>
+
+    <aside class="cart-summary-card">
+      <h2>Resumen</h2>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0</strong>
+      </div>
+
+      <div class="summary-row total">
+        <span>Total</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+
+      <button class="primary-button" id="checkoutButton">
+        Confirmar pedido
+      </button>
+    </aside>
+  </main>
+
+  <div id="checkoutModal" class="store-modal-overlay">
+    <div class="store-modal">
+      <div class="store-modal-header">
+        <h2>Confirmar pedido</h2>
+        <button id="closeCheckoutModalButton" class="store-modal-close">×</button>
+      </div>
+
+      <div class="store-modal-body">
+        <p>Revisá el total y seleccioná la forma de pago antes de confirmar.</p>
+
+        <div class="checkout-total-box">
+          <span>Total a pagar</span>
+          <strong id="checkoutModalTotal">$0</strong>
+        </div>
+
+        <label for="paymentMethod">Forma de pago</label>
+        <select id="paymentMethod">
+          <option value="TARJETA">Tarjeta</option>
+          <option value="TRANSFERENCIA">Transferencia</option>
+          <option value="EFECTIVO">Efectivo</option>
+        </select>
+      </div>
+
+      <div class="store-modal-actions">
+        <button id="cancelCheckoutButton" class="secondary-button">
+          Cancelar
+        </button>
+
+        <button id="confirmCheckoutButton" class="primary-button">
+          Confirmar pedido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./cart.ts"></script>
+</body>
+</html>

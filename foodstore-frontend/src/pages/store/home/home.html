@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Catálogo</title>
+  <link rel="stylesheet" href="../../../styles/store.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="./home.html">🍕 Food Store</a>
+
+    <nav class="nav">
+      <a id="homeLink" href="./home.html">Inicio</a>
+      <a id="cartLink" class="cart-nav-link" href="../cart/cart.html">
+        Carrito
+        <span id="cartBadge" class="cart-badge">0</span>
+      </a>
+      <a id="ordersLink" href="../../client/orders/orders.html">Mis pedidos</a>
+      <a id="adminPanelLink" href="../../admin/home/home.html" style="display: none;">
+        Panel admin
+      </a>
+      <button id="logoutButton">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Categorías</h2>
+      <ul id="categoryList" class="category-list"></ul>
+    </aside>
+
+    <main class="main-content">
+      <div class="filters">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar productos..."
+          autocomplete="off"
+        />
+
+        <select id="sortSelect">
+          <option value="">Ordenar</option>
+          <option value="name-asc">Nombre A-Z</option>
+          <option value="name-desc">Nombre Z-A</option>
+          <option value="price-asc">Precio menor a mayor</option>
+          <option value="price-desc">Precio mayor a menor</option>
+        </select>
+      </div>
+
+      <h1>Todos los productos</h1>
+      <p id="productsInfo" class="products-info"></p>
+
+      <section id="productsContainer" class="products-grid"></section>
+    </main>
+  </div>
+
+  <div id="productDetailModal" class="store-modal-overlay">
+    <div class="store-modal product-detail-modal">
+      <div class="store-modal-header">
+        <h2 id="productDetailTitle">Detalle del producto</h2>
+        <button id="closeProductDetailButton" class="store-modal-close">×</button>
+      </div>
+
+      <div id="productDetailContent"></div>
+    </div>
+  </div>
+  
+  <script type="module" src="./home.ts"></script>
+</body>
+</html>
