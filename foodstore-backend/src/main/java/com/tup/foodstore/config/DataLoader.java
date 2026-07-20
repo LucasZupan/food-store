@@ -201,7 +201,7 @@ public class DataLoader implements CommandLineRunner {
                 .precio(new BigDecimal("1500"))
                 .descripcion("Gaseosa Coca-Cola original 500ml")
                 .stock(200)
-                .imagen("https://imgs.search.brave.com/mpy_eqy5amQNhruIs_nGxxc5r3OB_e72krEXhJoEY1M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dmlhdHJlbnRvLmNv/bS5hci90aHVtYi8w/MDAwMDAwMDAwMDAx/MDY5NTUwMjI1NUEw/NkIzNC0yNjQ0LTRG/ODQtOUZFOS1DMDEz/RjQxMjA5N0EtMS0y/MDEtYV84MDB4ODAw/LmpwZWc")
+                .imagen("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_DGdYmpX-4DxMXP0pfMbqrYXVcWMLIfedQI22GryUuUKF94QnWFIeajQ&s=10")
                 .disponible(true)
                 .categoria(categorias.get("Bebidas"))
                 .build());
@@ -211,7 +211,7 @@ public class DataLoader implements CommandLineRunner {
                 .precio(new BigDecimal("1500"))
                 .descripcion("Gaseosa Sprite 500ml")
                 .stock(180)
-                .imagen("https://imgs.search.brave.com/A1KRBI3zvXKrym5ebbQizCZ8t2IdCKJF2fxiAastZ1A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzcxMTMzNi1NTEE4/OTE0OTYxOTU0M18w/ODIwMjUtVi53ZWJw")
+                .imagen("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5o_wW6KUdYGRXH5C_W1j3IEirD-sFNbxIM4VBXsVw4er7VOhPlu8beB69&s=10")
                 .disponible(true)
                 .categoria(categorias.get("Bebidas"))
                 .build());
