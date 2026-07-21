@@ -16,6 +16,7 @@ out/
 foodstore-backend/.gradle/
 foodstore-backend/build/
 foodstore-backend/target/
+foodstore-backend/.env
 
 # =========================
 # Frontend (Vite)
